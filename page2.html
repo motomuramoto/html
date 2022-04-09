@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+  <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>打刻システム</title>
+        <style type="text/css">
+            body{
+                font-family:"Avenir Next";
+            }
+
+            /*header style*/
+             .header-logo{
+            float: left;
+            font-size: 36px;
+            padding: 20px 40px;
+            }
+            .header {
+            background-color: #2675d0;
+            color: #fff;
+            height: 90px;
+            }
+
+            .header-name{
+                float:right;
+                padding: 50px 40px 0px 40px;
+
+            }
+
+            /*時間style*/
+            #dates{
+                font-size:30px; 
+                text-align: center;
+                
+
+            }
+            #times{
+                font-size:50px; 
+                text-align: center;
+                margin:auto;
+                padding:auto;
+
+            }
+
+
+            
+            /*ボタンstyle*/
+            .btn {
+                
+                width:200px;
+                height:100px;
+                font-size:30px;
+                margin:30px;
+                }
+            #startJ_btn{
+                color: #fff;
+                background-color: #eb6100;
+            }
+            #startR_btn{
+                color: #fff;
+                background-color: #eb6100;
+            }
+            #finR_btn{
+                color: #fff;
+                background-color: #eb6100;
+            }
+            #finJ_btn{
+                color: #fff;
+                background-color: #eb6100;
+            }
+
+            /*履歴style*/
+            .record-area{
+                border-top: 2px solid #dee7ec;
+                font-size: 28px;
+                padding-bottom: 15px;
+                margin-bottom: 50px;
+            }
+                
+        </style>
+        <script src="freee.js"></script>
+    </head>
+    <body onload="nameHeader()">
+      <div class="header" >
+        <div class="header-logo">打刻システム</div>
+        <div class="header-name" style="float: right;"><span id="login-name" ></span>さん</div>
+      </div>
+      <div class="time area"><br>
+        <div align="center"><span  id="dates" ></span></div><br>
+        <div align="center"><span id="times"></span></div>
+      </div>
+
+      <div class="buttonarea" align="center">
+          <input class="btn" id="startJ_btn" type="button" value="出勤" onclick="startJob()">
+          <input class="btn" id="startR_btn" type="button" value="休憩開始" onclick="startRest()">
+          <input class="btn" id="finR_btn" type="button" value="休憩終了" onclick="finRest()">
+          <input class="btn" id="finJ_btn" type="button" value="退勤" onclick="finJob()">
+      </div>
+
+      <div align="center">
+          <div class="record-area">勤怠履歴</div>
+        <table id="record" border="1" >
+            <tr>
+                <td>
+                    type
+                </td>
+                <td>
+                    time
+                </td>
+            </tr>
+        </table>
+      </div>
+      
+    
+
+    </body>
+  </html>
